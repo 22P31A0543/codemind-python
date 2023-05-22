@@ -1,9 +1,11 @@
-def digsum(n):
-    if(n==0):
-        return 0
-    if(n%9==0):
-        return 9
-    else:
-        return(n%9)
 n=int(input())
-print(digsum(n))
+t=n
+s=0
+while(t!=0):
+    r=t%10
+    s=s+r
+    t=t//10
+    if(t==0 and s>=10):
+        t=s
+        s=0
+print(s)
