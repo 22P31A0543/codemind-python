@@ -1,12 +1,10 @@
-n=int(input())
-m=n*n
-temp=n
-s=0
-while m!=0:
-    d=m%10
-    s=s+d
-    m=m//10
-if s==n:
+num = int(input())
+sqr = num*num
+sumOfDigit = 0
+while sqr>0:
+    sumOfDigit =sumOfDigit + sqr%10
+    sqr = sqr//10
+if (num == sumOfDigit):
     print("Neon Number")
 else:
     print("Not Neon Number")
